@@ -15,7 +15,7 @@ pixel rgb_to_ycbcr(uint8_t r, uint8_t g, uint8_t b) {
     return {y, cb, cr};
 }
 
-vector<uint8_t> ycbcr_to_rgb(uint8_t y, uint8_t cb, uint8_t cr) {
+pixel ycbcr_to_rgb(uint8_t y, uint8_t cb, uint8_t cr) {
     uint8_t r = y + 1.402 * (cr - 128);
     uint8_t g = y - 0.34414 * (cb - 128) - 0.71414 * (cr - 128);
     uint8_t b = y + 1.772 * (cb - 128);
